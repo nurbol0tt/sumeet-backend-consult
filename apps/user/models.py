@@ -18,4 +18,7 @@ class User(models.Model):
 class Consultant(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     telegram_id = models.BigIntegerField()
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="consultant")
+
+    def __str__(self) -> str:
+        return self.user.username
