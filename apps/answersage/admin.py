@@ -2,6 +2,16 @@ from django.contrib import admin
 
 from apps.answersage.models import Question, Answer
 
-# Register your models here.
-admin.site.register(Question)
-admin.site.register(Answer)
+
+@admin.register(Question)
+class QuestionAdmin(admin.ModelAdmin):
+    list_display = (
+        'id', 'user', 'consultant', 'topic', 'text', 'result', 'created'
+    )
+
+
+@admin.register(Answer)
+class AnswerAdmin(admin.ModelAdmin):
+    list_display = (
+        'id', 'question', 'answer', 'created'
+    )
