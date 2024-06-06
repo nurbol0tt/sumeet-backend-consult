@@ -36,7 +36,7 @@ You can choose either of the following methods to install and set up the project
 
 2. Clone the repository:
     ```
-    git clone https://gitlab.com/nurbolot664/miraclesoftrepo.git
+    git clone https://github.com/nurbol0tt/sumeet-backend-consult.git
     ```
    2.1 Build the Docker image and start the container:
    ```
